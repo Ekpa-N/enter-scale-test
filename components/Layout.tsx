@@ -37,7 +37,7 @@ const initialNewTaskForm: TaskCardProps = {
 
 export default function Layout({ children, }: Readonly<LayoutProps>) {
     const [loading, setLoading] = useState<boolean>(true)
-    const [testData, setTestData] = useState<BoardProps[]>(boards)
+    const [testData, setTestData] = useState<BoardProps[]>([])
     const [addBoard, setAddBoard] = useState<{ isView: boolean, name: string }>({
         isView: false,
         name: ""
