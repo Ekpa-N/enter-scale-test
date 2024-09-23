@@ -1,0 +1,8 @@
+screens: {
+      'midT': '768px',
+      'midL': '900px',
+      'desktop': '1280px',
+    }
+
+
+    
