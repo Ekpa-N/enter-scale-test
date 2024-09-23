@@ -243,11 +243,11 @@ export default function Layout({ children, }: Readonly<LayoutProps>) {
                     onClose={handleViewTaskClose}
                     className="flex justify-center"
                 >
-                    <Box component="div" className="flex  flex-col w-[95%] midL:w-[500px] mt-[50px] items-center p-[20px] h-fit ">
+                    <Box component="div" className="flex bg-[#F4F5F9] flex-col mt-[50px] items-center p-[20px] h-fit ">
                         <Typography variant="h6" component="h2">
                             Update Task
                         </Typography>
-                        <Box component="form" className={`${viewTask.type == "edit" ? "flex" : "hidden"} flex-col border border-[green] p-[5px] w-[300px]`}>
+                        <Box component="form" className={`${viewTask.type == "edit" ? "flex" : "hidden"} flex-col  bg-[#F4F5F9] p-[5px] w-[300px]`}>
                             <div className={`w-full mt-[20px] flex-col gap-[5px] flex`}>
                                 <input onChange={(e) => { onAddTaskFormChange(e, "update") }} name="title" className="outline-none pl-[5px] p-[3px] rounded-[5px]" placeholder="Task name" value={viewTask.task.title} />
                                 <input onChange={(e) => { onAddTaskFormChange(e, "update") }} name="desc" className="outline-none pl-[5px] p-[3px] rounded-[5px]" placeholder="Description" value={viewTask.task.desc} />
