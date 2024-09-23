@@ -16,7 +16,7 @@ type TaskProps = {
 export default function TaskCard({ task, operation, deleteTask, listId, listLabel }: TaskProps) {
     const {title, desc, date, owner, priority = "low", label, tag, id} = task
     return (
-        <div className="flex w-full w-[350px] relative rounded-[10px] gap-[10px] p-[3px] flex-col">
+        <div className="flex w-full w-[350px] bg-[#F4F5F9] relative rounded-t-[10px] gap-[10px] p-[3px] flex-col">
             <h2 style={{backgroundColor: `${priorityColours[priority?.toLocaleLowerCase()]}`}} className="border rounded-t-lg h-[30px] flex px-[5px] items-center border-[blue]">{priority}</h2>
             <div className="flex flex-col gap-[5px] px-[5px] border border-[blue]">
                 <h2 className="">Title: {title}</h2>

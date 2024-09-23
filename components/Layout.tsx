@@ -28,7 +28,7 @@ const initialNewTaskForm: TaskCardProps = {
     desc: "",
     date: "",
     owner: "",
-    priority: "Neutral",
+    priority: "LOW",
     label: "",
     tag: "",
     id: ""
@@ -243,7 +243,7 @@ export default function Layout({ children, }: Readonly<LayoutProps>) {
                     onClose={handleViewTaskClose}
                     className="flex justify-center"
                 >
-                    <Box component="div" className="flex bg-[#F4F5F9] flex-col w-[95%] midL:w-[500px] mt-[50px] items-center p-[20px] h-fit ">
+                    <Box component="div" className="flex  flex-col w-[95%] midL:w-[500px] mt-[50px] items-center p-[20px] h-fit ">
                         <Typography variant="h6" component="h2">
                             Update Task
                         </Typography>
@@ -275,7 +275,7 @@ export default function Layout({ children, }: Readonly<LayoutProps>) {
                                 </div>
                             </div>
                         </Box>
-                        <Box className={`${viewTask.type == "edit" ? "hidden" : "flex"} flex-col items-end`}>
+                        <Box component="div" className={`${viewTask.type == "edit" ? "hidden" : "flex"}  w-[360px]`}>
                             <TaskCard task={viewTask.task} operation={() => { setViewTask({ ...viewTask, type: "edit" }) }} deleteTask={deleteTask} listId={viewTask.listId} listLabel={viewTask.label} />
                         </Box>
                     </Box>
